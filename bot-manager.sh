@@ -28,8 +28,8 @@ case "$1" in
             npm install
         fi
         
-        # Start with PM2
-        pm2 start ecosystem.config.js
+        # Start with PM2 using direct app name
+        pm2 start index.js --name "$BOT_NAME" --update-env
         echo -e "${GREEN}$BOT_NAME started successfully!${NC}"
         ;;
         

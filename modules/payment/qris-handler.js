@@ -738,6 +738,12 @@ class QRISHandler {
             await this.bot.sendMessage(chatId, '❌ Gagal mengecek status pembayaran.');
         }
     }
+
+    // FIXED: Add missing method alias for compatibility
+    // Consumer modules call checkPaymentStatus but we had handlePaymentStatusCheck
+    async checkPaymentStatus(chatId, externalId) {
+        return await this.handlePaymentStatusCheck(externalId, chatId);
+    }
 }
 
 module.exports = QRISHandler;

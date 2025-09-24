@@ -7,6 +7,9 @@ const schemas = {
 };
 
 // --- Helper Functions ---
+// COMMENTED OUT: safeHandler is already implemented in MainHandlers class
+// This duplicate implementation was causing conflicts
+/*
 function safeHandler(fn, bot = null) {
     return async function(...args) {
         const msg = args[0];
@@ -30,6 +33,7 @@ function safeHandler(fn, bot = null) {
         }
     };
 }
+*/
 
 async function validateChannelAccess(bot, channelUsername) {
     try {
@@ -151,7 +155,7 @@ function escapeMarkdownV2(text) {
 
 module.exports = {
     schemas,
-    safeHandler,
+    // safeHandler,  // COMMENTED OUT - using MainHandlers class method instead
     validateChannelAccess,
     inviteTechSupport,
     escapeMarkdownV2

@@ -7,8 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "webhook": "node index.js --webhook",
-    "setup-db": "mysql -u root -p < database.sql",
-    "test": "node test.js"
+    "setup-db": "mysql -u root -p < database.sql"
   },
   "keywords": [
     "telegram",

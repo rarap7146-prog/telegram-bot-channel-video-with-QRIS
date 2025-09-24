@@ -1,4 +1,5 @@
-const { safeHandler } = require('./helpers');
+// REMOVED: const { safeHandler } = require('./helpers'); 
+// Using class method safeHandler instead to avoid conflicts
 
 class MainHandlers {
     constructor(bot, db, userSessions, channelSetup, contentManagement, settings, promoManagement, consumerHandlers, qrisHandler) {
